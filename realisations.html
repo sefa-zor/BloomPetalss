@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réalisation - BloomPetals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="entreprise.html">Entreprise</a></li>
+                <li><a href="realisations.html">Réalisations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="realisations">
+        <h1>Nos Réalisations</h1>
+        <p>Découvrez nos plus belles créations pour des événements uniques et mémorables. Chaque projet est conçu avec passion et attention au détail.</p>
+
+        <!-- Boutons pour le système de filtrage -->
+        <div class="filters">
+            <button onclick="filterSelection('all')">Tous</button>
+            <button onclick="filterSelection('mariage')">Mariages</button>
+            <button onclick="filterSelection('corporate')">Événements d'Entreprise</button>
+            <button onclick="filterSelection('anniversaire')">Anniversaires</button>
+        </div>
+
+        <!-- Galerie de projets -->
+        <div class="gallery">
+            <!-- Projets de mariage -->
+            <div class="project mariage">
+                <img src="*" alt="Mariage Claire & Jean">
+                <h3>Mariage: Claire & Jean</h3>
+                <p>Lieu: Château de Versailles - Arrangement floral romantique avec des roses blanches et des pivoines.</p>
+            </div>
+            <div class="project mariage">
+                <img src="*" alt="Mariage Sophie & Marc">
+                <h3>Mariage: Sophie & Marc</h3>
+                <p>Lieu: Jardin Botanique - Thème champêtre avec des fleurs sauvages et des marguerites.</p>
+            </div>
+            
+            <!-- Projets d'entreprise -->
+            <div class="project corporate">
+                <img src="*" alt="Gala ABC Corp.">
+                <h3>Événement d'Entreprise: ABC Corp. Gala</h3>
+                <p>Lieu: Hôtel de Paris - Décor floral moderne et épuré pour un gala prestigieux.</p>
+            </div>
+            
+            <!-- Projets d'anniversaire -->
+            <div class="project anniversaire">
+                <img src="*" alt="Anniversaire Enzo">
+                <h3>Anniversaire: Enzo, 1 an</h3>
+                <p>Lieu: Résidence Privée - Arrangement coloré et amusant pour célébrer le premier anniversaire d'Enzo.</p>
+            </div>
+        </div>
+
+        
+        <section class="testimonials">
+            <h2>Ce Que Nos Clients Disent</h2>
+            <blockquote>"L'équipe de BloomPetals a transformé notre mariage en un véritable conte de fées ! Mille mercis." - Claire & Jean</blockquote>
+            <blockquote>"Nos fleurs étaient la star de l'événement. Nous retravaillerons avec eux sans aucun doute!" - ABC Corp.</blockquote>
+        </section>
+    </section>
+
+    <script>
+        // Fonction de filtrage
+        function filterSelection(category) {
+            var projects = document.getElementsByClassName("project");
+            for (var i = 0; i < projects.length; i++) {
+                if (category === 'all') {
+                    projects[i].style.display = "block";
+                } else if (projects[i].classList.contains(category)) {
+                    projects[i].style.display = "block";
+                } else {
+                    projects[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
+
+    
